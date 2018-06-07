@@ -1,0 +1,163 @@
+/** RESET AND LAYOUT
+===================================*/
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&subset=cyrillic-ext';
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  background: #fff;
+  text-align: left;
+}
+
+h1 {
+  margin: 45px 0 0;
+  font-weight: 700;
+  font-size: 3em;
+  color: #333;
+  text-shadow: 2px 2px 3px #ccc;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.75em;
+  color: #333;
+}
+
+* + h2 {
+  margin-top: 30px;
+}
+
+p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+  color: #666;
+}
+
+* + p {
+  margin-top: 5px;
+}
+
+a {
+  border-bottom: 1px solid transparent;
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ol {
+  padding: 15px;
+  background: #eee;
+  border: 1px dashed #aaa;
+  color: #333;
+}
+
+li {
+  line-height: 1.6;
+  list-style: none;
+}
+
+a:hover {
+  border-color: #888;
+  color: #888;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #666;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  background: #f6f6f6;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 0 !important;
+  outline: none;
+  color: #666;
+}
+
+input:active,
+input:focus {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
+  color: #111;
+}
+
+footer {
+  width: 100%;
+  font-size: .75em;
+  font-weight: 300;
+  color: #aaa;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.var-type {
+  font-weight: 400;
+}
+
+.string {
+  color: #d14;
+}
+
+.integer {
+  color: #099;
+}
+
+.main-wrapper{
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.item-wrapper {
+  margin-top: 15px;
+  max-width: 300px;
+}
+
+.item-wrapper.interPut-wrapper {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.item-interval {
+  display: table;
+}
+
+.item-interval > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.item-interval .separator {
+  padding: 0 5px;
+}
+
+.item-interval .separator:after {
+  content: '—';
+  color: #aaa;
+}
+
+.item-interval .suffix {
+  padding-left: 10px;
+}

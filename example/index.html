@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример использования плагина InterPut</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="example.css">
+  <link rel="stylesheet" type="text/css" href="../jquery.interput.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../jquery.interput.js"></script>
+  <script>
+    (function ($) {
+      $(function(){
+        $('.interPut-wrapper').interPut();
+      })
+    }) (jQuery);
+  </script>
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1>InterPut.js</h1>
+    <p>jQuery плагин для удобной установки интервалов</p>
+    <h2>Обычные интервалы</h2>
+    <div class="item-wrapper clearfix">
+      <label class="fill-16-col">Стоимость</label>
+      <div class="item-interval">
+        <div>
+          <input name="value[min]" type="text" autocomplete="off" placeholder="От" maxlength="9" />
+        </div>
+        <div class="separator"></div>
+        <div>
+          <input name="value[max]" type="text" autocomplete="off" placeholder="До" maxlength="9" />
+        </div>
+        <div class="suffix">₽</div>
+      </div>
+    </div>
+
+    <div class="item-wrapper clearfix">
+      <label class="fill-16-col">Расстояние до МКАД</label>
+      <div class="item-interval">
+        <div>
+          <input name="value[min]" type="text" autocomplete="off" placeholder="От" maxlength="3" />
+        </div>
+        <div class="separator"></div>
+        <div>
+          <input name="value[max]" type="text" autocomplete="off" placeholder="До" maxlength="3" />
+        </div>
+        <div class="suffix">км</div>
+      </div>
+    </div>
+
+    <h2>С применением плагина</h2>
+    <div class="item-wrapper interPut-wrapper clearfix">
+      <label class="fill-16-col">Стоимость</label>
+      <div class="interPut-item">
+        <div>
+          <input name="value[min]" type="text" autocomplete="off" placeholder="От" maxlength="9" />
+        </div>
+        <div class="separator"></div>
+        <div>
+          <input name="value[max]" type="text" autocomplete="off" placeholder="До" maxlength="9" />
+        </div>
+        <div class="suffix">₽</div>
+      </div>
+    </div>
+
+    <div class="item-wrapper interPut-wrapper clearfix">
+      <label class="fill-16-col">Расстояние до МКАД</label>
+      <div class="interPut-item">
+        <div>
+          <input name="value[min]" type="text" autocomplete="off" placeholder="От" maxlength="3" />
+        </div>
+        <div class="separator"></div>
+        <div>
+          <input name="value[max]" type="text" autocomplete="off" placeholder="До" maxlength="3" />
+        </div>
+        <div class="suffix">км</div>
+      </div>
+    </div>
+
+    <p>Плагин InterPut позволяет максимально эффективно использовать пространство сайта.</p>
+
+    <h2>Как использовать?</h2>
+    <h3>HTML</h3>
+    <ol>
+      <li>&lt;div class="interPut-wrapper"></li>
+      <li>&nbsp;&nbsp;&lt;label>Расстояние до МКАД&lt;/label></li>
+      <li>&nbsp;&nbsp;&lt;div class="interPut-item"></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="value[min]" type="text" placeholder="От" /></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="separator">&lt;/div></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="value[max]" type="text" placeholder="До" /></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div></li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="suffix">км&lt;/div></li>
+      <li>&nbsp;&nbsp;&lt;/div></li>
+      <li>&lt;/div></li>
+    </ol>
+    <h3>JS</h3>
+    <ol>
+      <li>$('.interPut-wrapper').interPut();</li>
+    </ol>
+
+    <h2>Опции</h2>
+    <h3>checkMin</h3>
+    <p>Значение MIN должно быть строго меньше значения MAX</p>
+    <ol>
+      <li>По умолчанию: true</li>
+      <li>Опции: <span class="var-type">boolean</span> (true / false)</li>
+    </ol>
+
+    <h3>maxNumInput</h3>
+    <p>Максимально вводимое значение</p>
+    <ol>
+      <li>По умолчанию: <span class="integer">1E9</span></li>
+      <li>Опции: <span class="var-type">integer</span></li>
+    </ol>
+
+    <h3>valueTitle</h3>
+    <p>Title поля InterPut при наведении (хорошо работает с tooltip плагинами)</p>
+    <ol>
+      <li>По умолчанию: <span class="string">"Нажмите, чтобы выбрать интервал"</span></li>
+      <li>Опции: <span class="var-type">string</span></li>
+    </ol>
+
+    <h3>inputMin</h3>
+    <p>Используется для поиска поля со значением MIN</p>
+    <ol>
+      <li>По умолчанию: <span class="string">"input[name*='min']"</span></li>
+      <li>Опции: <span class="var-type">string</span></li>
+    </ol>
+
+    <h3>inputMax</h3>
+    <p>Используется для поиска поля со значением MAX</p>
+    <ol>
+      <li>По умолчанию: <span class="string">"input[name*='max']"</span></li>
+      <li>Опции: <span class="var-type">string</span></li>
+    </ol>
+  </div>
+</body>
+</html>
